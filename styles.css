@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Tangerine&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.griglia{
+    height: 1080px;
+    max-width: 1900px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    gap: 1rem;
+}
+
+header{
+    grid-column: span 10;
+    grid-row: span 2; 
+    margin-top: 20px; 
+}
+header > h1{
+    font-family: 'Tangerine', cursive;
+    font-size: 150px;
+    text-align: center;
+}
+header > p{
+    position: relative;
+    top: 25%;
+    font-family: 'Belleza', sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+header img{
+    width: 250px;
+    height: 250px;
+    border: 2px solid black;
+    border-radius: 50%;
+    float: right;
+    margin-right: 20px;
+}
+
+.container-nav{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 6; 
+    margin: 0 10px;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.skills, .contatto, .framework{
+    width: 300px;
+    height: max-content;
+    background: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 10px 10px 10px #888888;
+}
+.skills, .contatto, .framework li,ul {
+    list-style: none;
+    text-align: left;
+}
+.skills,.contatto, .framework h2{
+    text-align: center;
+}
+.contatto a{
+    text-decoration: none;
+    color: black;
+}
+div > ul {
+    padding: 0;
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.progetti{
+    grid-column: span 10;
+    grid-row-start: 4;
+    grid-row-end: 6;
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;    
+}
+.progetto{
+    width: 300px;
+    height: 400px;
+    background: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 20px;
+    box-shadow: 10px 10px 10px #888888;
+}
+.progetto img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+@media(min-width:1601px){
+    .griglia, footer{
+      background: whitesmoke;
+    }
+}
+
+@media (min-width:1201px) and (max-width:1600px){
+    .griglia{
+      background: limegreen;
+      height: 1550px;
+      grid-template-columns: repeat(10, 1fr);
+    }
+    .container-nav{
+        grid-row-start: 1;
+        grid-row-end: 5; 
+    }
+    .progetti{
+        margin-top: 0;
+    }
+}
+
+@media(min-width:601px) and (max-width:1200px){
+    .griglia{
+      background: red;
+      height: 1600px;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+    }
+    .container-nav{
+        grid-row-start: 1;
+        grid-row-end: 5; 
+    }
+
+
+@media(min-width:319px) and (max-width:600px){
+    .griglia{
+      background: lightsalmon;
+      height: 3500px;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-content: center;
+    }
+    
+    header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+    }
+    header img{
+        float: none;
+        position: relative;
+        left: 25%;
+        margin: 20px 0 50px 0;
+    }
+    header p{
+        margin: 20px 5px 0 5px;
+    }
+
+    .container-nav{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .skills, .framework, .contatto{
+        margin-top: 20px;
+    }
+    
+    .progetti{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+    }
+}
